@@ -41,18 +41,3 @@ def pal(str):
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = "8080", debug = False)
-
-class Database
-
-    def createDatabase():
-        query = "...
-        
-        
-        "
-
-        return db.apply(query)
-        
-    def query1():
-        .. 
-    def query2():
-        ..
