@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-UK">
+<head>
+    <meta charset="UTF-8">
+    <title>Morgan's Entry</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header class="title">
+        <h1>Morgan's Bluefuse Challenge Entry :D</h1>
+        <nav class="buttons">
+            <button type="button" onclick="window.location.href='/fibonacci'">Fibonacci Sequence</button>
+            <button type="button" onclick="window.location.href='/palindrome'">Palindrome Checker</button>
+        </nav>
+    </header>
+    <div class="linebreak"></div>
+    <section class="palsec">
+        <h2>Palindrome Checker</h2>
+        <p>Input a word to check whether or not it's a palindrome.</p>
+        <form action="/palindrome" method="post">
+            <label>Word:</label>
+            <input class="inputbox" name="str" type="text" placeholder="eg. racecar" required>
+            <input class="button" type="submit" value="Check">
+        </form>
+        <p class="out">{{ result }}</p>
+    </section>
+</body>
+</html>

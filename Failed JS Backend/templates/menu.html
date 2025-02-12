@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-UK">
+<head>
+    <meta charset="UTF-8">
+    <title>Morgan's Entry</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src = "static/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Morgan's Bluefuse Challenge Entry :D</h1>
+        <nav class="buttons">
+            <button type="button" onclick="fibShow()">Fibonacci Sequence</button>
+            <button type="button" onclick="palShow()">Palindrome Checker</button>
+        </nav>
+    </header>
+<div id="linebreak"></div>
+    <section id="fibsec">
+        <h2>Fibonacci Sequence Calculator</h2>
+        <p>Input an integer greater than zero to calculate the n-th term of the Fibonacci sequence.</p>
+        <form onsubmit="fibSubmit()" method="post">
+            <label>Integer:</label>
+            <input id="fib_in" class="inputbox" name="n" type="number" placeholder="eg. 5" min="1" max="20000" required>
+            <input class="button" type="submit" value="Calculate">
+        </form>
+        {% if fib_result != "" %}
+        <div class="output_container">
+            <p>nth Term:</p>
+            <p class="intout">{{ fib_result }}</p>
+        </div>
+        {% endif %}
+    </section>
+    <section id="palsec">
+        <h2>Palindrome Checker</h2>
+        <p>Input a word to check whether or not it's a palindrome.</p>
+        <form onsubmit="palSubmit()" method="post">
+            <label>Word:</label>
+            <input class="inputbox" name="str" type="text" placeholder="eg. racecar" required>
+            <input class="button" type="submit" value="Check">
+        </form>
+        <p class="out">{{ pal_result }}</p>
+    </section>
+</body>
+</html>

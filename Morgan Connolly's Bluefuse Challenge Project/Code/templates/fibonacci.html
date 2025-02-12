@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-UK">
+<head>
+    <meta charset="UTF-8">
+    <title>Morgan's Entry</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src = "static/script.js"></script>
+</head>
+<body>
+    <header class="title">
+        <h1>Morgan's Bluefuse Challenge Entry :D</h1>
+        <nav class="buttons">
+            <button type="button" onclick="transitionTo('/fibonacci')">Fibonacci Sequence</button>
+            <button type="button" onclick="transitionTo('/palindrome')">Palindrome Checker</button>
+        </nav>
+    </header>
+    <div id="linebreak"></div>
+    <section id="content">
+        <h2>Fibonacci Sequence Calculator</h2>
+        <p>Input an integer greater than zero to calculate the n-th term of the Fibonacci sequence.</p>
+        <form action="/fibonacci" method="post">
+            <label>Integer:</label>
+            <input class="inputbox" name="n" type="number" placeholder="eg. 5" min="1" max="20000" required>
+            <input class="button" type="submit" value="Calculate">
+        </form>
+        <!-- If result provided by backend, display it. -->
+        {% if result != ""%}
+        <div class="container">
+            <p>nth Term:</p>
+            <p class="intout">{{ result }}</p> 
+        </div>
+        {% endif %}
+    </section>
+</body>
+</html>
